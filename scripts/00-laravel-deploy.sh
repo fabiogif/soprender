@@ -21,8 +21,8 @@ echo "Running telescope migrations..."
 #php artisan telescope:install
 #php artisan db:seed --class=PlansTableSeeder --force --no-interaction
 #php artisan migrate
-echo "Npm Install"
-npm install
+#echo "Npm Install"
+#npm install
 
 #echo "Running seed..."
 #php artisan db:seed --class=UsersTableSeeder --force --no-interaction
