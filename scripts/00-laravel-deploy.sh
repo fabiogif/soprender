@@ -6,8 +6,6 @@ echo "Running composer Install"
 composer install --working-dir=/var/www/html
 composer require barryvdh/laravel-debugbar --dev
 composer require laravel/telescope --dev
-
-
 composer update
 
 echo "Caching config..."
@@ -19,11 +17,12 @@ php artisan route:cache
 #echo "Running migrations..."
 #php artisan migrate --force
 
-#echo "Running telescope migrations..."
-#php artisan telescope:install
-#php artisan db:seed --class=PlansTableSeeder --force --no-interaction
-#php artisan migrate
-
+echo "Running telescope migrations..."
+php artisan telescope:install
+php artisan db:seed --class=PlansTableSeeder --force --no-interaction
+php artisan migrate
+echo "Npm Install"
+npm install
 
 #echo "Running seed..."
 #php artisan db:seed --class=UsersTableSeeder --force --no-interaction
