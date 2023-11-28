@@ -4,8 +4,8 @@ echo "Running composer"
 cp /etc/secrets/.env .env
 echo "Running composer Install"
 composer install --working-dir=/var/www/html
-composer require barryvdh/laravel-debugbar --dev
-composer require laravel/telescope --dev
+#composer require barryvdh/laravel-debugbar --dev
+#composer require laravel/telescope --dev
 composer update
 
 echo "Caching config..."
@@ -18,9 +18,9 @@ php artisan route:cache
 #php artisan migrate --force
 
 echo "Running telescope migrations..."
-php artisan telescope:install
-php artisan db:seed --class=PlansTableSeeder --force --no-interaction
-php artisan migrate
+#php artisan telescope:install
+#php artisan db:seed --class=PlansTableSeeder --force --no-interaction
+#php artisan migrate
 echo "Npm Install"
 npm install
 
