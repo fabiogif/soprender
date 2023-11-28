@@ -32,3 +32,6 @@ echo "Running seed..."
 
 echo "Echo key app..."
 php artisan key:generate --show
+
+echo "Install NPM"
+npm install
