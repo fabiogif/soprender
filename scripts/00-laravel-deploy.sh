@@ -17,17 +17,18 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "Running migrations..."
-php artisan migrate --force 
+php artisan migrate --force
 
 echo "Running telescope migrations..."
 php artisan telescope:install
+#php artisan db:seed --class=PlansTableSeeder --force --no-interaction
 php artisan migrate
 
 
 echo "Running seed..."
-php artisan db:seed --class=UsersTableSeeder --force --no-interaction
-php artisan db:seed --class=PlansTableSeeder --force --no-interaction
-php artisan db:seed --class=TenantsTableSeeder --force --no-interaction
+#php artisan db:seed --class=UsersTableSeeder --force --no-interaction
+#php artisan db:seed --class=PlansTableSeeder --force --no-interaction
+#php artisan db:seed --class=TenantsTableSeeder --force --no-interaction
 
 echo "Echo key app..."
 php artisan key:generate --show
