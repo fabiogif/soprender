@@ -31,6 +31,3 @@ echo "Running telescope migrations..."
 
 echo "Echo key app..."
 php artisan key:generate --show
-
-echo "Running Serve"
-php artisan serve

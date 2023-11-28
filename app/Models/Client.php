@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Traits\UserACLTrait;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Client extends Authenticatable
 {
-    use HasApiTokens;
+    use HasApiTokens, UserACLTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -15,6 +16,7 @@ class Client extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'id',
         'name',
         'email',
         'password',
