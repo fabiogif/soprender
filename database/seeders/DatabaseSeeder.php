@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Occurrences;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,9 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PlansTableSeeder::class,
-            TenantsTableSeeder::class,
-            UsersTableSeeder::class
+            // PlansTableSeeder::class,
+            // TenantsTableSeeder::class,
+            // UsersTableSeeder::class,
+            // ClientTableSeeder::class,
+            OccurrenceTableSeeder::class,
+            // IssuingsTableSeeder::class,
         ]);
     }
 }

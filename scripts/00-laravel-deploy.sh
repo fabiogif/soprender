@@ -7,6 +7,7 @@ composer install --working-dir=/var/www/html
 #composer require barryvdh/laravel-debugbar --dev
 #composer require laravel/telescope --dev
 composer update
+composer require ramsey/uuid
 
 echo "Caching config..."
 php artisan config:cache

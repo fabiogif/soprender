@@ -21,10 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
 
             $table->unsignedBigInteger('tenant_id');
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
 
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
         });
     }
 

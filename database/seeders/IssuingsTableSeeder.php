@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Occurrences;
+use App\Models\Issuing;
 use Illuminate\Database\Seeder;
 
-class OccurrenceTableSeeder extends Seeder
+class IssuingsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class OccurrenceTableSeeder extends Seeder
      */
     public function run()
     {
-        return Occurrences::factory()->count(10)->create();
+        return Issuing::factory()->count(10)->create();
     }
 }

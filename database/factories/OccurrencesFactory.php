@@ -4,6 +4,9 @@ namespace Database\Factories;
 
 use App\Models\Client;
 use App\Models\{Issuing, StatusOccurrence, TypeOccurrence, User};
+use Database\Seeders\ClientTableSeeder;
+use Database\Seeders\TypeOccurrenceTableSeeder;
+use Database\Seeders\UsersTableSeeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OccurrencesFactory extends Factory
@@ -27,19 +30,19 @@ class OccurrencesFactory extends Factory
             'latitude' => $this->faker->latitude,
             'longitude' => $this->faker->longitude,
             'users_id' => function () {
-                return User::inRandomOrder()->first()->id;
+                return UsersTableSeeder::class;
             },
             'clients_id' => function () {
-                return Client::inRandomOrder()->first()->id;
+                return ClientTableSeeder::class;
             },
             'issuings_id' => function () {
-                return Issuing::inRandomOrder()->first()->id;
+                return IssuingFactory::class;
             },
             'type_occurrences_id' => function () {
-                return TypeOccurrence::inRandomOrder()->first()->id;
+                return TypeOccurrenceTableSeeder::class;
             },
             'status_occurrences_id' => function () {
-                return StatusOccurrence::inRandomOrder()->first()->id;
+                return StatusOccurrenceTableSeeder::class;
             },
         ];
     }
